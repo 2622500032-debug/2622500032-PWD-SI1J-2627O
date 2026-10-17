@@ -1,6 +1,7 @@
-{
+        *{
          box-sizing: border-box;
-}
+        }
+
         body { 
         margin: 0;
         padding: 12px; 
@@ -40,6 +41,26 @@
             text-decoration: none; 
         } 
 
+        main {
+            display:grid ;
+        }
+
+        main { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+        }
+
+        main { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+        }
+
+        main { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 16px; 
+        } 
+
         section { 
         width: 100%; 
         }
@@ -72,30 +93,19 @@
         border: 1px solid #cbd5e1; 
         }
 
-        #about { 
-        margin: 0; 
-        }
- 
-        #about h2 { 
-        margin-top: 0; 
-        } 
- 
-        #about p { 
-        line-height: 1.5; 
-        }
-
         #about {
             background-color: #ffffff;
-            border: 1px solid #2d333a;
+            border: 1px solid #cbd5e1;
             padding: 20px;
-            margin: 20px 0;
+            margin: 0;
             font-family: Arial, sans-serif;
         }
 
         #about h2 {
             color: #003366;
             border-bottom: 2px solid #003366;
-            padding-bottom: 6px;    
+            padding-bottom: 6px;
+            margin-top: 0;     
             margin-bottom: 16px;
         }
         
@@ -105,6 +115,7 @@
         }
 
         #about p {
+            line-height: 1.5;
             margin: 6px 0;
             padding: 6px 0;
             border-bottom: 1px solid #e6e6e6;
@@ -121,14 +132,16 @@
             background-color: #f8fafc;
             border: 1px solid #cbd5e1;
             padding: 20px;
-            margin: 20px 0;
+            margin: 0;
             font-family: Arial, sans-serif;
+            grid-column: 1 / -1;
         }
 
         #contact h2 {
             color: #003366;
             border-bottom: 2px solid #003366;
             padding-bottom: 6px;
+            margin-top: 0;
             margin-bottom: 16px;
         }
 
@@ -210,4 +223,3 @@
             align-items: flex-start;
             gap: 8px; 
         }
-

@@ -218,7 +218,7 @@
         
         /* Layout untuk viewport yang lebih lebar */ 
         @media (min-width: 768px) { 
-        nav { 
+        .nav-toggle { 
             margin-top: 16px; 
         } 
  

@@ -1,7 +1,41 @@
-<?php 
-// Pengujian awal eksekusi PHP. 
-echo "PHP berhasil dijalankan."; 
-?> 
+<?php
+$nim = "2622500032";
+$namaMahasiswa = "Christia Marcelina";
+$programStudi = "SI";
+$tahunAkademik = "2026/2027";
+$semester = 2;
+$ipk = 3.75;
+$statusAktif = true;
+$catatanTambahan = null;
+$batasSemester = 8; 
+$semester = 2;
+$sisaSemester = $batasSemester - $semester; 
+Const NAMA_MATA_KULIAH = "Pemrograman Web Dasar"; 
+const PROFIL_GITHUB = "2622500032-debug";
+$semesterValid = $semester >= 1 && $semester <= $batasSemester;
+$statusSemester = ($semesterValid && $statusAktif) ? "sesuai rentang" : "perlu diperiksa";
+if ($semester < 3) { 
+  $keteranganSemester = "Semester awal"; 
+} elseif ($semester <= 6) { 
+  $keteranganSemester = "Semester menengah"; 
+} else { 
+  $keteranganSemester = "Semester akhir"; 
+} 
+$namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik 
+Informatika" : "Lainnya"); 
+switch ($programStudi) { 
+  case "SI": 
+     $fokusProgramStudi = "Sistem informasi dan proses bisnis"; 
+    break; 
+  case "TI": 
+    $fokusProgramStudi = "Komputasi dan pengembangan perangkat lunak"; 
+    break; 
+  default: 
+    $fokusProgramStudi = "Belum ditentukan"; 
+} 
+
+?>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -36,9 +70,15 @@ echo "PHP berhasil dijalankan.";
 
     <main>
         <section id="home">
-            <h2>Selamat Datang</h2>
-            <p>Halo, Saya Nama Mahasiswa. Saya sedang mempelajari Pemrograman Web Dasar.</p>
-
+        <p>
+           Halo, saya
+          <strong><?php echo $namaMahasiswa; ?></strong>.
+          Saya sedang mempelajari mata kuliah
+          <strong><?php print NAMA_MATA_KULIAH; ?></strong>
+          pada tahun akademik
+          <?php echo $tahunAkademik; ?>.
+        </p>
+        
             <img src="img/foto-profil.jpeg" alt="Foto Profil Nama Mahasiswa" >
         </section>
         
@@ -47,28 +87,64 @@ echo "PHP berhasil dijalankan.";
 
             <article>
                 <h3>Profil Singkat</h3>
+                <p>Program Studi: <?php echo $namaProdi . " (" . $programStudi . ")"; ?></p> 
+                <p>Fokus program studi: <?php echo $fokusProgramStudi; ?></p> 
+                <p>Status mahasiswa: <?php echo $statusAktif ? "Aktif" : "Tidak aktif"; ?></p>
+                <p>Semester: <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p> 
+                <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p> 
+                <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p> 
+                <p>IPK: <?php echo number_format($ipk, 2, ',', '.'); ?></p> 
+                <p>Catatan tambahan: <?php echo $catatanTambahan === null ? "Belum ada" : $catatanTambahan; ?></p> 
                 <p>Saya Mahasiswa Program Studi Sistem Informasi.</p>
 
                 <h3>Target Belajar</h3>
-
-                <ol>
-                    <li> Memahami struktur HTML5.</li>
-                    <li>Menyusun halaman Web semantik.</li>
-                    <li>Memvalidasi dokumen HTML.</li>
-                </ol>
-            </article>
+                <h3>Target Belajar (Perulangan for)</h3> 
+          <ol> 
+        <?php 
+        for ($i = 1; $i <= 5; $i++) { 
+        echo "<li>Target belajar ke-" . $i . ": "; 
+        switch ($i) { 
+        case 1: 
+        echo "Memahami sintaks dasar PHP."; 
+        break; 
+        case 2: 
+        echo " Menggunakan variabel dan konstanta."; 
+        break; 
+        case 3: 
+        echo "Menerapkan operator dan percabangan."; 
+        break; 
+        case 4: 
+        echo "Menggunakan perulangan for dan while."; 
+        break; 
+        default: 
+        echo "Belum dipetakan"; 
+        break; 
+        } 
+        echo "</li>"; 
+        } 
+        ?> 
+        </ol> 
+        <h3>Semester (Perulangan while):</h3> 
+        <ol> 
+        <?php 
+        $nomorSemester = 1; 
+        while ($nomorSemester <= 3) { 
+        echo "<li>Semester " . $nomorSemester . "</li>"; 
+        $nomorSemester++; // operator penugasan 
+        } 
+        ?> 
+</ol> 
         </section>
 
     <section id="contact">
-      
             <h2>kontak</h2>
-
+              
             <p>
                 kunjungi 
-                <a href="https://github.com/2622500032-debug/2622500032-PWD-SI1J-2627O">profil GitHub saya</a>.
+              <a href="https://github.com/<?php echo PROFIL_GITHUB;?>">Profil GITHUB saya</a>
             </p>
 
-            <form id="contactForm" action="index.html" method="get" novalidate> 
+            <form id="contactForm" action="index.php" method="get" novalidate>  
               <div class="form-group"> 
                 <label for="nama">Nama Lengkap</label><br /> 
 
@@ -155,7 +231,7 @@ max="14" required />
     </main>
 
      <footer>
-        <p>&copy; 2026 Christia Marcelina [2622500032]</p>
+        <p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa; ?> [<?= $nim ?>]</p> 
     </footer>
     <script src="script.js"></script>
   </body>

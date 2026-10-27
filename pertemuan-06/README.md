@@ -146,17 +146,16 @@ Jalankan proyek melalui `localhost`
 
 Catat perubahan dan hasil pemeriksaan secara bertahap di README ini, misalnya:
 
-| Tahap | Perubahan yang didokumentasikan | Hasil aktual |
-|---|---|---|
-| Persiapan | Menyalin artefak P5 ke folder `pertemuan-06` dan memeriksa berkas pendukung | [isi setelah diperiksa] |
-| Persiapan PHP | Mengubah `index.html` menjadi `index.php` dan menyiapkan Laragon | [isi setelah diperiksa] |
-| Dasar PHP | Menguji tag PHP, komentar, `echo`, `print`, dan keluaran dinamis | [isi setelah diuji] |
-| Data dan operator | Menambahkan variabel, konstanta, tipe data, dan operator | [isi setelah diuji] |
-| Percabangan | Menerapkan `if-elseif-else`, ternary, dan `switch` | [isi setelah diuji] |
-| Perulangan | Menerapkan `for` dan `while` | [isi setelah diuji] |
-| Fungsi bawaan | Menguji `number_format()`, `date()`, sintaks `<?= ... ?>`, dan `NULL` | [isi setelah diuji] |
-| Formulir | Menyesuaikan atribut `action` ke `index.php` | [isi setelah diperiksa] |
-| Pemeriksaan akhir | Menguji seluruh fitur dan memperbaiki galat jika ada | [isi setelah diuji] |
+| Tahap | Perubahan yang didokumentasikan | Hasil aktual 
+| Persiapan | Menyalin artefak P5 ke folder `pertemuan-06` dan memeriksa berkas pendukung 
+| Persiapan PHP | Mengubah `index.html` menjadi `index.php` dan menyiapkan Laragon 
+| Dasar PHP | Menguji tag PHP, komentar, `echo`, `print`, dan keluaran dinamis 
+| Data dan operator | Menambahkan variabel, konstanta, tipe data, dan operator 
+| Percabangan | Menerapkan `if-elseif-else`, ternary, dan `switch` 
+| Perulangan | Menerapkan `for` dan `while` 
+| Fungsi bawaan | Menguji `number_format()`, `date()`, sintaks `<?= ... ?>`, dan `NULL` 
+| Formulir | Menyesuaikan atribut `action` ke `index.php`
+| Pemeriksaan akhir | Menguji seluruh fitur dan memperbaiki galat jika ada 
 
 ## Pengelolaan Versi dengan Git
 

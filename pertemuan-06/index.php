@@ -144,7 +144,8 @@ switch ($programStudi) {
               <a href="https://github.com/<?php echo PROFIL_GITHUB;?>">Profil GITHUB saya</a>
             </p>
 
-            <form id="contactForm" action="index.php" method="get" novalidate>  
+            <form id="contactForm" action="index.php" method="get" novalidate> 
+             
               <div class="form-group"> 
                 <label for="nama">Nama Lengkap</label><br /> 
 
